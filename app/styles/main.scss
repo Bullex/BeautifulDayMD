@@ -78,13 +78,13 @@ html, body {
     }
   }
   .mdl-layout__content {
-    background-image: url('/images/bg.jpg');
+    background-image: url('../images/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 56%;
   }
   .mdl-layout__header {
-    background-image: url('/images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 55%;
@@ -384,22 +384,22 @@ html, body {
 
           &[data-forecast='sunny'] {
             .mdl-card__supporting-text {
-              background-image: url('/images/forecast/sunny.png');
+              background-image: url('../images/forecast/sunny.png');
             }
           }
           &[data-forecast='cloudy'] {
             .mdl-card__supporting-text {
-              background-image: url('/images/forecast/cloudy.png');
+              background-image: url('../images/forecast/cloudy.png');
             }
           }
           &[data-forecast='rain'] {
             .mdl-card__supporting-text {
-              background-image: url('/images/forecast/rain.png');
+              background-image: url('../images/forecast/rain.png');
             }
           }
           &[data-forecast='snow'] {
             .mdl-card__supporting-text {
-              background-image: url('/images/forecast/snow.png');
+              background-image: url('../images/forecast/snow.png');
             }
           }
 
