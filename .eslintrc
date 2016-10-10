@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": 1
+  },
+  "globals": {
+    "angular": 1,
+    "dialogPolyfill": 1
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "dot-notation": 0,
+    "no-useless-concat": 0,
+    "indent": 0,
+    "max-len": 0,
+    "require-jsdoc": 0,
+    "spaced-comment": 0,
+    "camelcase": 0
+  }
+}

@@ -1,0 +1,489 @@
+/*************media queries*****************/
+
+$mobile: "(max-device-width: 767px)";
+$tablet: "(min-device-width: 768px) and (max-device-width: 991px)";
+$desktop: "(min-device-width: 992px)";
+
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+.mdl-demo {
+  .mdl-layout__container {
+    z-index: 1;
+  }
+  .mdl-color--light {
+    background-color: rgb(255, 248, 243) !important;
+  }
+  .mdl-weather {
+    h4 {
+      margin: 20px 0 20px 0;
+    }
+    .mdl-weather--decoration {
+      .mdl-button--icon {
+        width: 64px;
+        height: 64px;
+        color: grey;
+        padding: 0;
+
+        &.is-active {
+          color: white;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .material-icons {
+          font-size: 40px;
+          transform: translate(-20px, -12px);
+        }
+      }
+    }
+    .mdl-weather--header {
+      margin-right: 10px;
+      line-height: 24px;
+    }
+  }
+  .mdl-dropdown {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+
+    .mdl-button--icon {
+      margin-left: 5px;
+      margin-top: 2px;
+    }
+
+    h6 {
+      margin: 5px 0 15px;
+
+      &~.mdl-button--icon {
+        margin-top: -15px;
+      }
+    }
+  }
+  .mdl-progress {
+    width: 100%;
+
+    .bar1, .bar3 {
+      background-color: rgb(255, 64, 129) !important;
+      animation-duration: 5s;
+    }
+  }
+  .mdl-layout__content {
+    background-image: url('/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 56%;
+  }
+  .mdl-layout__header {
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 55%;
+  }
+  .mdl-layout__header-row {
+    padding-left: 40px;
+  }
+  .mdl-layout {
+    &.is-small-screen {
+      .mdl-layout__header-row {
+        h3 {
+          font-size: inherit;
+        }
+      }
+      .mdl-layout__tab-bar {
+        .mdl-button {
+          display: none;
+        }
+      }
+    }
+    &:not(.is-small-screen) {
+      .mdl-layout__tab-bar, .mdl-layout__tab-bar-container {
+        overflow: visible;
+      }
+    }
+    .mdl-layout__tab-bar {
+      padding: 0;
+      padding-left: 16px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      @media #{$mobile} {
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        align-items: center;
+        h4 {
+          margin-top: 14px;
+        }
+      }
+
+      .mdl-layout__tab {
+        height: 64px;
+        line-height: 64px;
+
+        &.is-active {
+          &::after {
+            background-color: white;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+  .mdl-layout__tab-bar-button {
+    display: none;
+  }
+  .mdl-layout__tab-bar-container {
+    height: 64px;
+  }
+
+  main {
+    > .mdl-layout__tab-panel {
+      padding: 8px;
+      padding-top: 48px;
+    }
+  }
+  .mdl-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: inherit;
+
+    .mdl-card__supporting-text {
+      margin: 40px;
+      flex-grow: 1;
+      padding: 0;
+      color: inherit;
+      width: calc(100% - 80px);
+
+      @media #{$mobile} {
+        margin: 20px;
+        width: calc(100% - 40px);
+      }
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      + .mdl-card__actions {
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+  .mdl-card__actions {
+    margin: 0;
+    padding: 4px 20px;
+    color: inherit;
+    justify-content: space-between;
+    display: flex;
+
+    a {
+      color: grey;
+      margin: 0;
+
+      &:hover, &:active {
+        color: inherit;
+        background-color: transparent;
+      }
+
+      &.mdl-button--delete {
+        &:hover, &:active {
+          color: rgb(255, 64, 129) !important;
+          background-color: transparent;
+        }
+      }
+
+      &.mdl-button--edit {
+        &:hover, &:active {
+          color: rgb(63, 81, 181) !important;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  #add {
+    position: absolute;
+    right: 28px;
+    top: -28px;
+    z-index: 999;
+  }
+
+  .mdl-layout__content {
+    section {
+      &:not(:last-of-type) {
+        position: relative;
+        margin-bottom: 48px;
+      }
+      &.section--center {
+        max-width: 860px;
+      }
+    }
+  }
+  #features {
+    section {
+      margin-bottom: 72px;
+
+      &.section--center {
+        max-width: 620px;
+      }
+    }
+    h4, h5 {
+      margin-bottom: 16px;
+    }
+  }
+  section {
+    > header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > .material-icons {
+        font-size: 3rem;
+      }
+    }
+    > .section__play-btn {
+      min-height: 200px;
+    }
+    > button {
+      position: absolute;
+      z-index: 99;
+      top: 8px;
+      right: 8px;
+    }
+    .section__circle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+    .section__text {
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding-top: 14px;
+      @media #{$mobile} {
+        padding-bottom: 20px;
+      }
+      h5 {
+        margin: 0;
+        margin-bottom: 0.5em;
+      }
+      a {
+        text-decoration: none;
+      }
+      .mdl-button--icon {
+        float: right;
+        top: -20px;
+        @media #{$mobile} {
+          top: 12px;
+        }
+      }
+    }
+    .section__circle-container {
+      > .section__circle-container__circle {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+        margin: 8px 0;
+        color: white;
+        line-height: 64px;
+        text-align: center;
+        font-size: 30px;
+      }
+    }
+    &.section--footer {
+      padding: 64px 0;
+      margin: 0 -8px -8px -8px;
+
+      .section__circle--big {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin: 8px 32px;
+      }
+    }
+    &.section--center {
+      .section__text {
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, .13);
+        }
+      }
+    }
+  }
+  .is-small-screen {
+    section {
+      &.section--footer {
+        .section__circle--big {
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          margin: 8px 16px;
+        }
+      }
+    }
+  }
+  .mdl-card {
+    .mdl-card__supporting-text {
+      > h3 {
+        &:first-child {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+  .toc {
+    border-left: 4px solid #C1EEF4;
+    margin: 24px;
+    padding: 0;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-size: 0.9rem;
+      margin-top: 0;
+    }
+
+    a {
+      color: #4DD0E1;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 28px;
+      display: block;
+    }
+  }
+  .mdl-menu__container {
+    z-index: 99;
+  }
+
+  #module_view {
+    > section {
+      > .mdl-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: transparent;
+
+        > .mdl-card--square {
+          margin: 0 10px 10px 0;
+          width: 330px;
+          height: 300px;
+
+          &[data-forecast='sunny'] {
+            .mdl-card__supporting-text {
+              background-image: url('/images/forecast/sunny.png');
+            }
+          }
+          &[data-forecast='cloudy'] {
+            .mdl-card__supporting-text {
+              background-image: url('/images/forecast/cloudy.png');
+            }
+          }
+          &[data-forecast='rain'] {
+            .mdl-card__supporting-text {
+              background-image: url('/images/forecast/rain.png');
+            }
+          }
+          &[data-forecast='snow'] {
+            .mdl-card__supporting-text {
+              background-image: url('/images/forecast/snow.png');
+            }
+          }
+
+          .mdl-card__supporting-text {
+            position: relative;
+            background-size: 35%;
+            background-repeat: no-repeat;
+            background-position: 10% 100%;
+
+            h1 {
+              display: inline-block;
+              margin-top: 10px;
+              vertical-align: top;
+            }
+
+            h3 {
+              display: inline-block;
+              margin-top: 20px;
+              vertical-align: top;
+              float: right;
+            }
+
+            .mdl-card__temperature {
+              position: absolute;
+              right: 0;
+              font-size: 20px;
+              bottom: 24px;
+              text-align: right;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mdl-badge[data-badge] {
+    &:after {
+      width: 43px;
+      border-radius: 15px;
+      top: -6px;
+      right: -20px;
+      @media #{$mobile} {
+        right: -5px;
+      }
+    }
+  }
+  .mdl-card--square {
+    .mdl-badge[data-badge] {
+      &:after {
+        top: 0px;
+        right: -35px;
+      }
+    }
+  }
+  f-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    dialog {
+      border: none;
+      box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+      width: 280px;
+      z-index: 100;
+      top: 30%;
+
+      .modal-hidden-input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+
+      &::backdrop {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.0980392);
+      }
+    }
+  }
+}
+
